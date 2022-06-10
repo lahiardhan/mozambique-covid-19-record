@@ -17,15 +17,13 @@ total_death = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 # Daily New Deaths
 daily_death = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,1,0,0,1,2,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1,1,0,0,2,1,0,0,1,0,1,0,3,0,4,0,0,2,2,0,1,1,2,1,1,4,2,2,1,4,1,0,2,1,2,0,2,0,1,1,0,1,1,1,1,1,0,0,0,1,1,0,3,1,2,1,3,1,2,1,2,0,0,1,1,1,1,0,2,2,0,0,0,0,5,0,6,0,3,3,2,1,1,1,2,1,2,1,1,0,0,1,1,1,0,1,0,1,0,0,3,0,2,1,0,1,2,1,1,1,0,1,1,1,1,1,0,6,0,3,2,1,0,3,1,1,1,1,2,0,1,4,5,6,5,5,4,4,6,5,18,7,8,4,18,12,7,7,8,14,10,7,11,9,7,4,19,17,12,12,9,15,9,5,15,6,15,13,11,10,12,4,10,10,12,4,8,4,7,2,5,0,17,11,12,12,3,6,6,6,7,5,2,7,4,8,3,3,0,7,1,4,3,3,3,1,3,2,1,5,4,2,5,0,6,0,3,4,0,0,3,0,3,1,0,2,0,3,0,0,3,1,0,2,2,3,0,1,1,0,2,5,0,0,0,0,1,0,2,1,1,1,1,2,2,1,0,0,0,0,0,2,0,0,0,3,0,0,0,2,1,0,1,1,0,0,0,0,1,0,0,0,1,1,1,0,0,0,1,0,1,2,0,0,3,1,0,4,5,6,2,2,1,1,3,6,6,1,12,7,8,11,11,5,8,15,20,14,17,20,24,18,24,19,20,20,32,31,11,25,25,25,34,26,21,19,27,28,17,21,26,12,28,34,13,15,13,14,16,19,17,9,15,17,13,12,10,2,15,8,5,9,3,9,8,9,2,11,2,5,1,5,1,3,4,3,3,1,0,0,2,1,3,4,1,0,0,0,0,3,1,1,1,0,1,2,3,2,1,0,0,1,0,0,0,2,1,0,2,0,0,0,1,0,1,1,0,0,0,0,1,0,0,1,0,0,0,1,0,1,1,0,0,1,1,0,0,0,0,0,0,0,2,0,0,0,0,0,0,2,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,2,1,0,1,2,0,2,2,0,5,3,1,4,2,1,5,3,12,8,10,6,7,12,11,8,15,10,2,8,11,3,6,4,8,6,4,5,4,4,6,3,4,4,2,2,2,1,1,2,3,3,1,6,0,3,0,0,0,2,1,2,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,1,0,0,1,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0]
 
-# Active Cases (Daily)
+# Daily Active Cases
 active_case = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,3,5,7,7,8,8,8,8,10,10,10,9,9,9,9,16,16,18,18,19,19,26,27,29,32,31,31,31,31,33,37,53,58,64,64,64,64,64,67,61,61,61,62,60,57,55,53,57,69,70,70,80,77,86,93,101,102,108,114,116,120,143,137,141,155,149,148,152,161,155,207,205,236,233,281,295,300,315,332,343,362,400,429,449,474,487,483,487,507,547,551,546,537,562,588,588,626,648,651,649,663,684,706,723,727,752,726,743,758,777,784,841,886,946,999,996,1017,1009,991,1019,1023,1043,1047,1062,1065,1094,1107,1121,1159,1212,1250,1279,1283,1249,1286,1310,1371,1393,1413,1535,1554,1589,1604,1614,1636,1673,1699,1727,1735,1715,1769,1810,1872,1758,1678,1642,1662,1621,1660,1698,1723,1846,1922,1811,1728,1736,1802,1833,1904,1973,1944,1988,2100,2274,2423,2495,2688,2729,2722,2876,3106,3130,3005,2863,2790,2887,2934,3118,3393,3292,3435,3253,3320,3249,3278,3126,2973,2614,2660,2502,2571,2592,2466,2305,2284,2250,2277,2361,2278,2169,2105,2087,2252,2432,2566,2647,2819,2902,2539,2433,2249,2340,2456,2597,2412,2205,2117,2111,1897,2064,2065,2045,1928,1856,1879,1725,1830,1799,1802,1756,1754,1703,1707,1762,1754,1696,1715,1819,1747,1780,1806,1841,1861,1720,1756,1745,1657,1695,1761,1800,1618,1667,1748,1877,1994,1853,1781,1757,1854,1827,1879,1966,1813,1761,1761,1860,1937,1894,1985,1970,1771,1731,1813,1947,2116,2375,2464,2302,2354,2330,2822,3653,4212,4514,4625,5239,5706,6417,7113,7703,8317,8885,9641,10432,10700,11329,11555,11451,12383,12096,12736,13193,13397,14332,14481,14847,15533,16388,16536,16871,16978,17009,17491,17855,17165,17058,17104,18031,18197,18987,19211,19152,19232,19460,19781,19337,18419,18442,18308,17799,17381,17613,17541,16452,15725,16220,14965,15151,15406,15411,14453,14016,14318,14347,13760,13411,13411,13353,13088,12352,12668,12794,12783,12677,12558,12094,11914,11047,11082,11158,11152,11152,10395,10119,10304,10258,10213,10211,9581,9583,9549,9381,9406,9063,8600,8176,8161,7096,7082,7129,7112,6113,6184,6290,6324,6383,6384,6357,5979,4500,4449,4509,3190,2268,2238,1860,1872,1891,1593,1612,1596,1604,1614,1557,1414,1175,1048,874,891,904,908,904,854,875,892,661,675,686,624,612,630,389,437,434,467,532,487,530,589,615,620,639,690,699,637,743,816,838,872,921,1057,1249,1479,1610,1488,1634,2054,2437,2750,3238,3189,3403,3770,4321,4830,5698,6688,7613,7809,9019,9745,11534,12408,14074,14269,15679,16662,18004,18758,19927,20784,21578,22808,22514,22465,23872,23778,24887,26239,25423,26006,28096,29016,30462,32214,31234,27668,28445,24987,26165,27085,27810,27882,24116,24186,19832,18964,18778,19238,18583,17748,16874,16782,16863,16880,16057,14943,15006,13990,13991,12378,12723,12961,12479,11803,10878,10488,9764,9921,9279,8711,8282,7864,7344,6195,6048,6046,5923,5187,5204,5004,3027,2990,2696,2509,2505,2413,2284,2308,2159,2093,2067,2042,1817,1781,1837,1560,1475,1489,1305,1302,1314,1133,1167,1191,1187,1112,1056,1058,1071,1056,1073,989,711,626,636,636,625,647,637,632,335,330,149,132,149,153,160,136,140,137,121,135,135,116,99,107,127,130,133,123,93,118,123,129,122,133,113,94,96,102,105,104,104,99,95,93,115,173,247,352,408,484,604,802,1023,1080,1511,1772,1878,2586,3534,4575,5924,6982,7517,8021,10051,11679,14105,16822,17718,18229,17627,20646,23553,28492,30504,33134,33250,32660,34737,36737,35905,38926,41652,39224,38003,37222,37141,36842,36024,35684,35964,28189,24960,24139,22436,21523,20720,18279,15220,14338,12833,12479,12051,12007,9571,8286,6358,6417,6476,6106,5237,5044,4797,4770,4633,4420,4204,4201,4236,4097,4020,3908,3797,3752,3782,3803,3625,3584,3513,3510,3506,3524,3525,3425,3233,3024,3043,3029,3042,3047,3047,1458,1098,1022,1012,1020,1026,1009,1001,1007,1012,994,988,986,980,977,975,978,976,976,976,969,47,51,58,63,66,68,51,47,51,54,30,33,46,49,43,46,54,45,52,58,52,49,56,62,47,53,60,59,60,64,65,69,70,52,48,43,44,47,45,55,61,60,59,64,81,94,102,107,85,94,110,71,77,83,97,80,78,104,126,152]
 
 # Total Recovered
 total_recovered = []
 for i in range (0, len(daily_case)):
    total_recovered.append(total_case[i] - total_death[i] - active_case[i])
-
-print('Total pasien sembuh dari covid-19 di mozambik sebanyak ', max(total_recovered),' orang')
 
 # Daily Recovered
 daily_recovered = []
@@ -34,86 +32,99 @@ for i in range(0, len(total_recovered)-1):
     a = total_recovered[i+1]-total_recovered[i]
     daily_recovered.append(a)
 
-#? Total Case VS Total Recovery
-plt.plot(x, total_case, 'r', label='total cases')
-plt.plot(x, total_recovered, 'g', label='daily recovered')
-plt.legend()
-plt.xticks(np.linspace(0, len(x),3), ['Feb 2020', 'April 2021', 'May 2022'])
-
-plt.xlabel('Date')
-plt.ylabel('Total cases')
-plt.title('Mozambique Covid-19 Daily Updates')
-plt.show()
-
-#? Daily Cases VS Daily Recovered
-plt.plot(x, daily_case, 'r', label='daily cases')
-plt.plot(x, daily_recovered, 'g', label='daily recovered')
-plt.legend()
-plt.xticks(np.linspace(0, len(x),3), ['Feb 2020', 'April 2021', 'May 2022'])
-
-plt.xlabel('Date')
-plt.ylabel('Total cases')
-plt.title('Mozambique Covid-19 Daily Updates')
-plt.show()
-
-#? Lama Waktu Recovery dari Covid (Total Cases VS Total Recovery)
-tgl_js = []
-totcase_js = []
-totreco_js = []
-for i in range(len(x)):
-   for j in range(len(x)):
-      if x[i] == 'Jun 10, 2021':
-         if x[j] == 'Sep 09, 2021':
-            for k in range(i, j+1):
-               tgl_js.append(x[k])
-               totcase_js.append(total_case[k])
-               totreco_js.append(total_recovered[k])
-
-plt.plot(tgl_js, totcase_js, 'r', label='total cases')
-plt.plot(tgl_js, totreco_js, 'g', label='total recovered')
-plt.legend()
-plt.xticks(np.linspace(0, len(tgl_js)+1,10))
-
-plt.xlabel('Date')
-plt.ylabel('Total cases')
-plt.title('Mozambique Covid-19 Daily Updates')
-plt.show()
-
-#? Reproduction Number (Laju Penyebaran)
+# Reproduction Number
 rep_number = []
 for i in range(0, len(x)):
    try:
-      rt = daily_case[i]/daily_case[i-1]
+      rt = daily_case[i]/daily_recovered[i]
       rep_number.append(rt)
    except:
       rep_number.append(0)
 
+# Jangka Waktu Tertentu
+tgl_js = []
+totcase_js = []
+totreco_js = []
+daycase_js = []
+dayreco_js = []
 rt_js = []
-tgl_js2 = []
 dc_js = []
 for i in range(len(x)):
    for j in range(len(x)):
-      if x[i] == 'Jul 27, 2021':
-         if x[j] == 'Aug 11, 2021':
+      if x[i] == 'Dec 01, 2021':
+         if x[j] == 'Feb 13, 2022':
             for k in range(i, j+1):
-               tgl_js2.append(x[k])
+               tgl_js.append(x[k])
+               totcase_js.append(total_case[k])
+               totreco_js.append(total_recovered[k])
+               daycase_js.append(daily_case[k])
+               dayreco_js.append(daily_recovered[k])
                dc_js.append(daily_case[k])
                rt_js.append(rep_number[k])
 
-plt.subplot(1,2,1)
-plt.plot(tgl_js2,rt_js, 'r', label='Rt')
-plt.title('Mozambique Covid-19 Rt')
-plt.xlabel('Date')
-plt.xticks(rotation=70)
-plt.ylabel('Reproduction Number')
+#? Total Case VS Total Recovery
+plt.plot(x, total_case, 'r', label='total cases')
+plt.plot(x, total_recovered, 'g', label='daily recovered')
 plt.legend()
+plt.xticks(np.linspace(0, len(x),10), rotation=45)
+plt.xlabel('Date')
+plt.ylabel('Total cases')
+plt.title('Mozambique Covid-19 Daily Updates')
+plt.grid(linestyle = '--', linewidth=0.5)
+plt.show()
 
-plt.subplot(1,2,2)
-plt.plot(tgl_js2, dc_js, 'black', label='Kasus harian')
-plt.title('Mozambique Covid-19 Daily New Case')
-plt.xlabel('Date')
-plt.xticks(rotation=70)
-plt.ylabel('Kasus Harian')
+#? Daily Cases VS Daily Recovered
+plt.plot(x, daily_recovered, 'g', label='daily recovered')
+plt.plot(x, daily_case, 'r', label='daily cases')
 plt.legend()
+plt.xticks(np.linspace(0, len(x),10), rotation=45)
+plt.xlabel('Date')
+plt.ylabel('Total cases')
+plt.title('Mozambique Covid-19 Daily Updates')
+plt.grid(linestyle = '--', linewidth=0.5)
+plt.show()
+
+#? Lama Waktu Recovery dari Covid (Total Cases VS Total Recovery) dalam periode tertentu
+plt.plot(tgl_js, totcase_js, 'r', label='total cases')
+plt.plot(tgl_js, totreco_js, 'g', label='total recovered')
+plt.legend()
+plt.xticks(np.linspace(0, len(tgl_js)+1,10), rotation=45)
+plt.xlabel('Date')
+plt.ylabel('Total cases')
+plt.title('Mozambique Covid-19 Daily Updates')
+plt.grid(linestyle = '--', linewidth=0.5)
+plt.show()
+
+#? Lama Waktu Recovery dari Covid (Daily New Cases VS Daily Recovery) dalam periode tertentu
+plt.plot(tgl_js, daycase_js, 'r', label='Daily Cases')
+plt.plot(tgl_js, dayreco_js, 'g', label='Daily Recovered')
+plt.legend()
+plt.xticks(np.linspace(0, len(tgl_js),15), rotation=45)
+plt.xlabel('Date')
+plt.ylabel('Cases')
+plt.title('Daily New Cases VS Daily Recovered')
+plt.grid(linestyle = '--', linewidth=0.5)
+plt.show()
+
+#? Reproduction Number (Laju Penyebaran) dalam periode tertentu
+# Plotting the Reproduction Number
+plt.subplot(1,2,1)
+plt.plot(tgl_js,rt_js, 'r', label='Rt')
+plt.legend()
+plt.xticks(np.linspace(0, len(tgl_js),15), rotation=60)
+plt.xlabel('Date')
+plt.ylabel('Reproduction Number')
+plt.title('Mozambique Covid-19 Rt')
+plt.grid(linestyle = '--', linewidth=0.5)
+
+# Plotting the Daily New Cases
+plt.subplot(1,2,2)
+plt.plot(tgl_js, dc_js, 'black', label='Kasus harian')
+plt.legend()
+plt.xticks(np.linspace(0, len(tgl_js),15), rotation=60)
+plt.xlabel('Date')
+plt.ylabel('Kasus Harian')
+plt.title('Mozambique Covid-19 Daily New Case')
+plt.grid(linestyle = '--', linewidth=0.5)
 
 plt.show()
