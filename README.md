@@ -1,3 +1,3 @@
-# mozambique-covid-19-record
+# Mozambique Covid-19 Record
 
-Program ini menggunakan data yang diambil dari website [worldometer.com](https://www.worldometers.info/)
+The data of this program is taken from the WorldOMeter website -> [worldometer.com](https://www.worldometers.info/).
