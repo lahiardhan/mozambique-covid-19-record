@@ -86,7 +86,7 @@ for i in range(time1-1, time2):
    recov_time.append(tgl_js[i])
    y1.append(totcase_js[time1-1])
    y2.append(max(dayreco_js))
-   
+
 # plot kurva x = Jan 03, 2022
 rtx = []
 rty = [max(rt_js), min(rt_js)-50]
@@ -96,6 +96,7 @@ for i in range(len(tgl_js)):
       rtf += rt_js[i]
       rtx.append(tgl_js[i])
       rtx.append(tgl_js[i])
+rt_final = '%.1f'%rtf
 
 #! FIRST GRAPH 
 #? Lama Waktu Recovery dari Covid (Total Cases VS Total Recovery) dalam periode tertentu
