@@ -33,13 +33,13 @@ for i in range(0, len(total_recovered)-1):
     daily_recovered.append(a)
 
 # Reproduction Number
-rep_number = []
-for i in range(0, len(x)):
+rep_number = [0]
+for i in range(1, len(x)):
    try:
       rt = daily_case[i]/daily_recovered[i]
       rep_number.append(rt)
    except:
-      rep_number.append(0)
+      rep_number.append(rep_number[i-1])
 
 # Jangka Waktu Tertentu
 tgl_js = []
@@ -49,6 +49,7 @@ daycase_js = []
 dayreco_js = []
 rt_js = []
 dc_js = []
+Re = []
 for i in range(len(x)):
    for j in range(len(x)):
       if x[i] == 'Dec 01, 2021':
@@ -61,70 +62,98 @@ for i in range(len(x)):
                dayreco_js.append(daily_recovered[k])
                dc_js.append(daily_case[k])
                rt_js.append(rep_number[k])
+               Re.append(1)
 
-#? Total Case VS Total Recovery
-plt.plot(x, total_case, 'r', label='total cases')
-plt.plot(x, total_recovered, 'g', label='daily recovered')
-plt.legend()
-plt.xticks(np.linspace(0, len(x),10), rotation=45)
-plt.xlabel('Date')
-plt.ylabel('Total cases')
-plt.title('Mozambique Covid-19 Daily Updates')
-plt.grid(linestyle = '--', linewidth=0.5)
-plt.show()
+# plot kurva untuk lama waktu recovery 
+time1 = []     # day of thehighest number new cases
+time2 = []     # day of the highest number daily recovery
+for i in range(len(daycase_js)):
+   if daycase_js[i] == max(daycase_js):
+      tgl_daycase = tgl_js[i]
+      time1 = i+1
+      break
+for j in range(len(dayreco_js)):
+   if dayreco_js[j] == max(dayreco_js):
+      tgl_dayreco = tgl_js[j]
+      time2 = j+1
+      break
 
-#? Daily Cases VS Daily Recovered
-plt.plot(x, daily_recovered, 'g', label='daily recovered')
-plt.plot(x, daily_case, 'r', label='daily cases')
-plt.legend()
-plt.xticks(np.linspace(0, len(x),10), rotation=45)
-plt.xlabel('Date')
-plt.ylabel('Total cases')
-plt.title('Mozambique Covid-19 Daily Updates')
-plt.grid(linestyle = '--', linewidth=0.5)
-plt.show()
+# Menghitung lama waktu recovery 
+recov_time = []
+y1 = []
+y2 = []
+for i in range(time1-1, time2):
+   recov_time.append(tgl_js[i])
+   y1.append(totcase_js[time1-1])
+   y2.append(max(dayreco_js))
+   
+# plot kurva x = Jan 03, 2022
+rtx = []
+rty = [max(rt_js), min(rt_js)-50]
+rtf = 0
+for i in range(len(tgl_js)):
+   if tgl_js[i] == "Jan 03, 2022":
+      rtf += rt_js[i]
+      rtx.append(tgl_js[i])
+      rtx.append(tgl_js[i])
 
+#! FIRST GRAPH 
 #? Lama Waktu Recovery dari Covid (Total Cases VS Total Recovery) dalam periode tertentu
-plt.plot(tgl_js, totcase_js, 'r', label='total cases')
-plt.plot(tgl_js, totreco_js, 'g', label='total recovered')
-plt.legend()
-plt.xticks(np.linspace(0, len(tgl_js)+1,10), rotation=45)
-plt.xlabel('Date')
-plt.ylabel('Total cases')
-plt.title('Mozambique Covid-19 Daily Updates')
-plt.grid(linestyle = '--', linewidth=0.5)
+fig, axs0 = plt.subplots()
+ax1 = axs0.twinx()
+
+axs0.plot(tgl_js, totcase_js, 'r', label='total cases')
+ax1.plot(tgl_js, totreco_js, 'g', label='total recovery')
+plt.plot(recov_time, y1, 'm--', label='recovered in %d days'%(time2-time1))
+axs0.legend(loc="upper right")
+ax1.legend(loc="upper left")
+plt.xticks(np.linspace(0, len(tgl_js)+1,10))
+axs0.set_xlabel('Date')
+axs0.set_ylabel('Total Cases', color='r')
+ax1.set_ylabel('Total Recovery', color='g')
+axs0.tick_params(axis='y', colors='r')
+ax1.tick_params(axis='y', colors='g')
+plt.title('Total Cases VS Total Recovery')
+axs0.grid(linestyle = '--', linewidth=0.5)
 plt.show()
 
+#! SECOND GRAPH
 #? Lama Waktu Recovery dari Covid (Daily New Cases VS Daily Recovery) dalam periode tertentu
-plt.plot(tgl_js, daycase_js, 'r', label='Daily Cases')
-plt.plot(tgl_js, dayreco_js, 'g', label='Daily Recovered')
-plt.legend()
-plt.xticks(np.linspace(0, len(tgl_js),15), rotation=45)
-plt.xlabel('Date')
-plt.ylabel('Cases')
+fig, axs2 = plt.subplots()
+ax3 = axs2.twinx()
+
+axs2.plot(tgl_js, daycase_js, 'r', label='Daily Cases')
+ax3.plot(tgl_js, dayreco_js, 'g', label='Daily Recovery')
+plt.plot(recov_time, y2, 'm--', label='recovered in %d days'%(time2-time1))
+axs2.legend(loc="upper right")
+ax3.legend(loc="upper left")
+plt.xticks(np.linspace(0, len(tgl_js)+1,10))
+axs2.set_xlabel('Date')
+axs2.set_ylabel('Daily Cases', color='r')
+ax3.set_ylabel('Daily Recovery', color='g')
+axs2.tick_params(axis='y', colors='r')
+ax3.tick_params(axis='y', colors='g')
 plt.title('Daily New Cases VS Daily Recovered')
-plt.grid(linestyle = '--', linewidth=0.5)
+axs2.grid(linestyle = '--', linewidth=0.5)
 plt.show()
 
+#! THIRD GRAPH
 #? Reproduction Number (Laju Penyebaran) dalam periode tertentu
-# Plotting the Reproduction Number
-plt.subplot(1,2,1)
-plt.plot(tgl_js,rt_js, 'r', label='Rt')
-plt.legend()
-plt.xticks(np.linspace(0, len(tgl_js),15), rotation=60)
-plt.xlabel('Date')
-plt.ylabel('Reproduction Number')
-plt.title('Mozambique Covid-19 Rt')
-plt.grid(linestyle = '--', linewidth=0.5)
+fig, axs4 = plt.subplots()
+ax5 = axs4.twinx()
 
-# Plotting the Daily New Cases
-plt.subplot(1,2,2)
-plt.plot(tgl_js, dc_js, 'black', label='Kasus harian')
-plt.legend()
-plt.xticks(np.linspace(0, len(tgl_js),15), rotation=60)
-plt.xlabel('Date')
-plt.ylabel('Kasus Harian')
+ax5.plot(tgl_js, dc_js, '#1d1066', label='Daily Cases')
+axs4.plot(tgl_js, rt_js, 'r', label='Rt')
+axs4.plot(tgl_js, Re, 'b--', label="I/R ratio = Re")
+axs4.plot(rtx, rty, 'g--', label="I/R = %s"%rt_final)
+axs4.legend(loc="upper left")
+ax5.legend()
+plt.xticks(np.linspace(0, len(tgl_js)+1,10))
+axs4.set_xlabel('Date')
+axs4.set_ylabel('Rt', color='r')
+ax5.set_ylabel('Daily Cases', color='#1d1066')
+axs4.tick_params(axis='y', colors='r')
+ax5.tick_params(axis='y', colors='#1d1066')
 plt.title('Mozambique Covid-19 Daily New Case')
-plt.grid(linestyle = '--', linewidth=0.5)
-
+axs4.grid(linestyle = '--', linewidth=0.5)
 plt.show()
